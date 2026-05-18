@@ -431,21 +431,4 @@ Special thanks to:
 - React ecosystem
 - Playwright testing framework
 
----
 
-## 📞 Support & Contact
-
-- **Issues:** [GitHub Issues](https://github.com/yourusername/cinemaflix/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/yourusername/cinemaflix/discussions)
-- **Email:** team@cinemaflix.dev
-- **Documentation:** See `guidlines/project_documentation.pdf`
-
----
-
-<div align="center">
-
-**Made with ❤️ by the CinemaFlix Team**
-
-[⬆ back to top](#cinemaflix---movie-rental-system)
-
-</div>
