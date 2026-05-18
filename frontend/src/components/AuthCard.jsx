@@ -100,11 +100,7 @@ export default function AuthCard({
                   Need help?
                 </button>
               </div>
-              <div className="owner-credentials">
-                <strong>Owner Access</strong>
-                <span>Username: owner</span>
-                <span>Password: Owner12345</span>
-              </div>
+              
             </>
           ) : null}
 
