@@ -411,24 +411,5 @@ We welcome contributions! Please follow these guidelines:
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👥 Authors & Acknowledgments
-
-**Development Team:** [Your Team Name]
-- [Team Member 1] - Backend Lead
-- [Team Member 2] - Frontend Lead
-- [Team Member 3] - QA/Testing
-
-**Course:** CSE323 - Software Engineering (Spring 2026)
-
-Special thanks to:
-- FastAPI documentation & community
-- React ecosystem
-- Playwright testing framework
 
 
