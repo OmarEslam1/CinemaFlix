@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - CinemaFlix</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#690003",
+                        "outline-variant": "#5e3f3b",
+                        "secondary-container": "#454747",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "inverse-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-highest": "#353534",
+                        "surface-dim": "#131313",
+                        "outline": "#af8782",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "background": "#131313",
+                        "tertiary-fixed": "#d5e3ff",
+                        "surface-bright": "#393939",
+                        "on-surface-variant": "#e9bcb6",
+                        "on-tertiary-container": "#f8f9ff",
+                        "surface-container": "#201f1f",
+                        "tertiary": "#a7c8ff",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#fff7f6",
+                        "on-secondary-container": "#b4b5b5",
+                        "primary": "#ffb4aa",
+                        "surface-tint": "#ffb4aa",
+                        "on-error": "#690005",
+                        "on-primary-fixed": "#410001",
+                        "secondary": "#c6c6c7",
+                        "inverse-primary": "#c0000c",
+                        "tertiary-fixed-dim": "#a7c8ff",
+                        "surface-variant": "#353534",
+                        "on-tertiary": "#003061",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "tertiary-container": "#0072d7",
+                        "on-tertiary-fixed-variant": "#004689",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary": "#2f3131",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-fixed": "#ffdad5",
+                        "primary-container": "#e50914",
+                        "on-tertiary-fixed": "#001b3c",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-primary-fixed-variant": "#930007"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "60px",
+                        "row-gap": "48px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "gutter-desktop": "24px",
+                        "gutter-mobile": "12px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Bebas Neue"],
+                        "display-lg": ["Bebas Neue"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Bebas Neue"],
+                        "headline-lg": ["Bebas Neue"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["64px", { "lineHeight": "64px", "fontWeight": "400" }],
+                        "display-lg": ["96px", { "lineHeight": "96px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "48px", "letterSpacing": "0.03em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md relative overflow-x-hidden">
+<!-- Cinematic Background Image -->
+<div class="fixed inset-0 z-[-1] bg-cover bg-center" data-alt="A dramatic cinematic scene featuring a dimly lit movie theater aisle with plush red velvet seats stretching into the darkness. The lighting is moody and atmospheric, mimicking the intense glow of a silver screen illuminating the deep blacks and rich reds of the environment. The overall aesthetic perfectly captures the premium, high-contrast, lights-out experience of a modern high-end cinema, setting a thrilling mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBve6Qu3hwaViAApNbbATGCkorfuEGMVaYPoXpKt2mCL4X9L83QeB3ayO80kmaurt8p1fe6tgiFqGTk6LuESi0qVP5qwixYJ78Nyp06ICXToS2jkFRB2mUxf5-8VbB1klQkVXo4m14vZQR_GXNWUaGZbtMv6QDa4amRiZJNDt1hYMWSiFkJA3fQvMS4UEofRw6EP0aWihs5__gUhdz0OPM8th6TEWUqQj8e9DSsyr9ljzV_DXezXyaCkhcZigf8gY8Mg5sP8QaxklI');">
+<!-- Gradient Overlay to ensure text readability -->
+<div class="absolute inset-0 bg-background/60 bg-gradient-to-t from-background via-background/80 to-background/40"></div>
+</div>
+<!-- Minimal Header for Transactional Page -->
+<header class="w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 z-10">
+<a class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary-container tracking-tighter hover:scale-105 transition-transform duration-200" href="/">
+            CINEMAFLIX
+        </a>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow flex items-center justify-center px-margin-mobile md:px-margin-desktop py-row-gap z-10">
+<!-- Login Card (Glassmorphism) -->
+<div class="w-full max-w-[450px] bg-surface/80 backdrop-blur-[20px] border border-white/15 rounded-xl p-8 md:p-12 shadow-2xl flex flex-col gap-6">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">
+                Sign In
+            </h1>
+<form action="#" class="flex flex-col gap-6" method="POST">
+<!-- Email Input -->
+<div class="relative group">
+<input class="w-full bg-surface-container border-0 border-b-2 border-surface-variant text-on-surface font-body-md text-body-md px-4 py-4 rounded-t-DEFAULT focus:ring-0 focus:border-primary-container focus:bg-surface-bright transition-colors peer placeholder-transparent" id="email" name="email" placeholder="Email or phone number" required="" type="email"/>
+<label class="absolute left-4 top-4 text-secondary font-body-md text-body-md transition-all peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-secondary peer-valid:-translate-y-3 peer-valid:scale-75 origin-left cursor-text" for="email">
+                        Email or phone number
+                    </label>
+</div>
+<!-- Password Input -->
+<div class="relative group">
+<input class="w-full bg-surface-container border-0 border-b-2 border-surface-variant text-on-surface font-body-md text-body-md px-4 py-4 rounded-t-DEFAULT focus:ring-0 focus:border-primary-container focus:bg-surface-bright transition-colors peer placeholder-transparent" id="password" name="password" placeholder="Password" required="" type="password"/>
+<label class="absolute left-4 top-4 text-secondary font-body-md text-body-md transition-all peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-secondary peer-valid:-translate-y-3 peer-valid:scale-75 origin-left cursor-text" for="password">
+                        Password
+                    </label>
+</div>
+<!-- Sign In Button -->
+<button class="w-full bg-primary-container text-white font-title-md text-title-md py-4 rounded-DEFAULT hover:bg-inverse-primary hover:scale-[1.02] active:scale-95 transition-all duration-200 mt-2" type="submit">
+                    Sign In
+                </button>
+<!-- Helper Links -->
+<div class="flex justify-between items-center mt-2">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="form-checkbox bg-surface border-surface-variant text-primary-container rounded-sm focus:ring-primary-container focus:ring-offset-surface" type="checkbox"/>
+<span class="font-body-md text-body-md text-secondary group-hover:text-on-surface transition-colors">Remember me</span>
+</label>
+<a class="font-body-md text-body-md text-secondary hover:text-on-surface hover:underline transition-colors" href="#">
+                        Need help?
+                    </a>
+</div>
+</form>
+<!-- Sign Up Prompt -->
+<div class="mt-8 text-secondary font-body-md text-body-md">
+                New to CinemaFlix? 
+                <a class="text-on-surface hover:text-primary-container hover:underline transition-colors font-title-md ml-1" href="/register">
+                    Sign up now.
+                </a>
+</div>
+<!-- Recaptcha Disclaimer -->
+<p class="font-label-sm text-label-sm text-surface-variant mt-2 max-w-[90%]">
+                This page is protected by Google reCAPTCHA to ensure you're not a bot. 
+                <button class="text-primary hover:underline">Learn more.</button>
+</p>
+</div>
+</main>
+<!-- Footer for Transactional Page -->
+<footer class="w-full bg-background/90 backdrop-blur-md border-t border-surface-variant flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-8 gap-4 mt-auto z-10">
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-primary-container tracking-tighter opacity-80 hover:opacity-100 transition-opacity">
+            CINEMAFLIX
+        </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">Help Center</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">Cookie Preferences</a>
+</div>
+<div class="font-label-sm text-label-sm text-secondary">
+            © 2024 CinemaFlix Inc. All rights reserved.
+        </div>
+</footer>
+</body></html>

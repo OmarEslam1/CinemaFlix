@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CinemaFlix - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#690003",
+                    "outline-variant": "#5e3f3b",
+                    "secondary-container": "#454747",
+                    "on-background": "#e5e2e1",
+                    "primary-fixed-dim": "#ffb4aa",
+                    "inverse-surface": "#e5e2e1",
+                    "surface": "#131313",
+                    "inverse-on-surface": "#313030",
+                    "surface-container-highest": "#353534",
+                    "surface-dim": "#131313",
+                    "outline": "#af8782",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "background": "#131313",
+                    "tertiary-fixed": "#d5e3ff",
+                    "surface-bright": "#393939",
+                    "on-surface-variant": "#e9bcb6",
+                    "on-tertiary-container": "#f8f9ff",
+                    "surface-container": "#201f1f",
+                    "tertiary": "#a7c8ff",
+                    "error": "#ffb4ab",
+                    "on-error-container": "#ffdad6",
+                    "error-container": "#93000a",
+                    "on-primary-container": "#fff7f6",
+                    "on-secondary-container": "#b4b5b5",
+                    "primary": "#ffb4aa",
+                    "surface-tint": "#ffb4aa",
+                    "on-error": "#690005",
+                    "on-primary-fixed": "#410001",
+                    "secondary": "#c6c6c7",
+                    "inverse-primary": "#c0000c",
+                    "tertiary-fixed-dim": "#a7c8ff",
+                    "surface-variant": "#353534",
+                    "on-tertiary": "#003061",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "tertiary-container": "#0072d7",
+                    "on-tertiary-fixed-variant": "#004689",
+                    "on-surface": "#e5e2e1",
+                    "on-secondary": "#2f3131",
+                    "surface-container-lowest": "#0e0e0e",
+                    "primary-fixed": "#ffdad5",
+                    "primary-container": "#e50914",
+                    "on-tertiary-fixed": "#001b3c",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-secondary-fixed-variant": "#454747",
+                    "on-primary-fixed-variant": "#930007"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "60px",
+                    "row-gap": "48px",
+                    "margin-mobile": "16px",
+                    "unit": "8px",
+                    "gutter-desktop": "24px",
+                    "gutter-mobile": "12px"
+            },
+            "fontFamily": {
+                    "title-md": [
+                            "Inter"
+                    ],
+                    "label-sm": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "display-lg-mobile": [
+                            "Bebas Neue"
+                    ],
+                    "display-lg": [
+                            "Bebas Neue"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "Bebas Neue"
+                    ],
+                    "headline-lg": [
+                            "Bebas Neue"
+                    ]
+            },
+            "fontSize": {
+                    "title-md": [
+                            "20px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "64px",
+                            {
+                                    "lineHeight": "64px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "96px",
+                            {
+                                    "lineHeight": "96px",
+                                    "letterSpacing": "0.02em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "36px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "48px",
+                                    "letterSpacing": "0.03em",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        /* Custom scrollbar for horizontal movie rows */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-none">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full">
+<div class="flex items-center gap-8">
+<a class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary-container tracking-tighter" href="#">
+                    CINEMAFLIX
+                </a>
+<div class="hidden md:flex gap-6">
+<a class="font-body-md text-body-md text-on-surface font-bold border-b-2 border-primary-container pb-1 hover:scale-105 transition-transform duration-200 active:scale-95 duration-100" href="#">Home</a>
+<a class="font-body-md text-body-md text-secondary hover:text-on-surface transition-colors hover:scale-105 transition-transform duration-200 active:scale-95 duration-100" href="#">My List</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-secondary hover:text-on-surface hover:scale-105 transition-transform duration-200 active:scale-95 duration-100 flex items-center justify-center">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="text-primary hover:scale-105 transition-transform duration-200 active:scale-95 duration-100 font-label-sm text-label-sm">
+                    Search
+                </button>
+<div class="w-8 h-8 rounded-full overflow-hidden border-2 border-transparent hover:border-white transition-colors cursor-pointer ml-2">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeHbZbBdhkZxoQhG4o2lADSgoLTQz_CQb96kKC3NdM7jxNNvEY_Ign-jNQmlSkvIPe_-YPZ4Rg2GsnWtsxC4YFobeagVLcL-yNieBwHMWLWTFORO5JCq8BWVTIEHhcLwoJaBQ2goLEezk98nhkXaLpJXWUPNYZZWBfnmQp0w3u5T12efDcR8tdiBU22TSF-HIvY2V4kyApedi75I8K6u-3riohYMFnlhjMgAT9_B3F15FCEKJBqYoBUDswESd-ILJUMi4FPgl6ioI"/>
+</div>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[819px] min-h-[600px] flex items-end pb-margin-desktop bg-surface">
+<div class="absolute inset-0 z-0">
+<img alt="Featured Blockbuster" class="w-full h-full object-cover" data-alt="A spectacular, high-contrast cinematic shot of a sci-fi cityscape at night. Neon lights cut through thick fog, illuminating massive futuristic skyscrapers. A lone figure stands on a precarious ledge overlooking the glowing abyss. The color palette features deep blacks, electric blues, and vivid reds, conveying a high-energy, premium theatrical experience. The lighting is dramatic, emphasizing the vast scale of the environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASyFzFYFi03CzFDorC45I79S8vtkluBq1fn7L3F8EAhTRNvvIL9QSuioyzpMyQE9tI1ZNweGckQi0u7dgUHCBm2liqwQuoUzn5A0_TC6p77jRlm7Y7WZrtziGsKaCELS4T9Dy-tW6zrCF-dGLZ_kj1ElWmdNn93GSzSU-rzephA9DKqitO8_bkVIue5j4AcJ13euQkAIjplRQ0E2-QcQnfKKdC5XxExsYjKUqEdMDrjOUJlxM5D-lJqB3bsgpiff0NGNKlzfe0BfU"/>
+<!-- Gradient Overlay for readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent w-2/3"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop w-full md:w-2/3 max-w-4xl pt-32">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface mb-4">NEON HORIZON</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-8 line-clamp-3">
+                In a sprawling metropolis where memories are currency, a rogue archivist uncovers a secret that could collapse the system. A visually stunning journey through the darkest corners of human desire.
+            </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container text-white px-8 py-3 rounded hover:bg-red-700 transition-colors flex items-center gap-2 font-title-md text-title-md">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                    Play
+                </button>
+<button class="glass-panel text-white px-8 py-3 rounded hover:bg-white/20 transition-colors flex items-center gap-2 font-title-md text-title-md">
+<span class="material-symbols-outlined">info</span>
+                    More Info
+                </button>
+</div>
+</div>
+</header>
+<main class="flex-grow z-10 relative -mt-8 pt-8">
+<!-- My Movies Section (CRUD) -->
+<section class="px-margin-mobile md:px-margin-desktop mb-row-gap">
+<div class="flex justify-between items-end mb-4">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">My Movies</h2>
+<button class="text-secondary hover:text-white flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined">add</span>
+                    Add Movie
+                </button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-unit">
+<!-- Card 1 -->
+<div class="group relative aspect-[2/3] rounded-lg overflow-hidden bg-surface-container cursor-pointer transition-transform duration-300 hover:scale-105 hover:z-20">
+<img alt="Movie Poster" class="w-full h-full object-cover" data-alt="A gritty, high-contrast poster of an action thriller. A bruised detective stands in the rain holding a glowing red flare. Deep shadows dominate the composition, emphasizing the intense, cinematic mood. The lighting is moody and dramatic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfuyR5KxAAQuDTmOGhP8zj3hQtPCyA_Ei6HvaNOyX50BpmpmKVvrHu4y03I_dVJ8PkinanvAyq1bnssVEAhmvaUPpgxiaSHjo3OXqoSbiqy3AUPcg4BjQ-LCsUIzL0x4ZPvG1DEDhOkXnj6GP1BVv5GfW1cq8lAxszpJFO9wJDnFcR1NB-svqdWgelqJNvexIXmKcsT-FqmuMwirKbM51NwAteGEHoJW4xnHjsoyKHBH22VNpIWcm4zWvVYeWCUJN1imYHehTK7l0"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center items-center gap-4">
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary-container hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="flex gap-2">
+<button class="text-white hover:text-primary-container p-2">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="text-white hover:text-primary-container p-2">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative aspect-[2/3] rounded-lg overflow-hidden bg-surface-container cursor-pointer transition-transform duration-300 hover:scale-105 hover:z-20">
+<img alt="Movie Poster" class="w-full h-full object-cover" data-alt="A mesmerizing, surreal poster for a psychological drama. Abstract geometric shapes interlock like a maze over a minimalist dark background. Vibrant red accents highlight the pathways. The aesthetic is sleek, mysterious, and highly polished." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnRVoWIA8vr7MCNC1nJF-zxcozp6Js2-ra_kim7Bx6BsU2TJEu9koMs0Up9dvULuCP4GOvfuOLHbF5Qh1fvDF2gKE38c-dJZApOeAzat0jh5944FVjeeuztz14A4D_I2_h5WThuA7SvJw9CA-O17C6VMk9L2I5QywMOepamMePqHXeREdbt60wlyYqghM6P-ipu7ChcISiQT1j97DxaGczLMpUCuvfubUeSA4PEJPNYCb8kHaGeWBTuna4y_GjTMCbSw3AKep9-S0"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center items-center gap-4">
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary-container hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="flex gap-2">
+<button class="text-white hover:text-primary-container p-2">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="text-white hover:text-primary-container p-2">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative aspect-[2/3] rounded-lg overflow-hidden bg-surface-container cursor-pointer transition-transform duration-300 hover:scale-105 hover:z-20">
+<img alt="Movie Poster" class="w-full h-full object-cover" data-alt="A grand fantasy epic poster. A silhouetted figure stands before a massive, glowing portal that tears through a dark, star-filled void. The lighting is spectacular, creating a sense of awe and immense scale. The colors lean heavily into deep blacks and bright, ethereal whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwH_wxvPsDEhUGCOqcexjT_of5QV84JhOODrCfvd_h-P-ZQpXALSRJCnJb2kxBglNOyPaQGz8bBTJ37fJgQMXekIYNBDfoUle9wz8ofOm8JVQNSXvPOGtaLfM-biXF2FKpkHH636MWC_4tDVaSmffW1dJ-x_hWRBfqxUOsN4PZDoyMwUX3ZUXcgIArz8DFkUphJsUGFlRD5zXnJnsUBZXT54mu0OdDMpEkIrKRST-vGcy8YDjeWM7xoyYpLrAPkw10fHX1_dEP3Dg"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center items-center gap-4">
+<button class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-primary-container hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="flex gap-2">
+<button class="text-white hover:text-primary-container p-2">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="text-white hover:text-primary-container p-2">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trending Now Row -->
+<section class="pl-margin-mobile md:pl-margin-desktop mb-row-gap overflow-hidden">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-4">Trending Now</h2>
+<div class="flex gap-unit overflow-x-auto no-scrollbar pb-8 pr-margin-mobile md:pr-margin-desktop snap-x">
+<!-- Horizontal Cards -->
+<div class="flex-none w-[250px] md:w-[300px] aspect-[16/9] rounded-lg overflow-hidden relative group cursor-pointer snap-start transition-transform duration-300 hover:scale-105 hover:z-20">
+<img alt="Trending Movie" class="w-full h-full object-cover" data-alt="An intense close-up still from a high-octane racing movie. A sleek, black sports car tears through a rain-slicked city street at night. The motion blur creates a dynamic sense of speed. Red taillights bleed into the darkness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcWEq8nCH6G-hcMsi5ZqG8qj4-A3Y5TTo9l85hyxZqscNN7NhSHZ8MgTTB-ITwpvCC9GaZqCV7wxebyP0cY_TVdRHUQYRxhRQ13QLD73YMvLNU8OiHf_O9NHKDh9priUPjfDq7dKAf1UYJhPji4LfMqlcd_3zdqcLrdz05wDUlVFn2eS5v42ANmWLjc4r9DktyvmGpUV7e0PBRKO3zf2I5TnDD_Q0sQ_jxtIC7A7UkH76V3Cwp_LnElB9kfpVlP1roikZ2Bbfmbcc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<p class="font-title-md text-title-md text-white">Velocity</p>
+</div>
+</div>
+<div class="flex-none w-[250px] md:w-[300px] aspect-[16/9] rounded-lg overflow-hidden relative group cursor-pointer snap-start transition-transform duration-300 hover:scale-105 hover:z-20">
+<img alt="Trending Movie" class="w-full h-full object-cover" data-alt="A sweeping, majestic landscape from a historical epic. Silhouettes of warriors on horseback crest a ridge against a blood-red sunset. The aesthetic is grand, cinematic, and steeped in stark contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2j8yIUFgaHzftvYqYRX2wydkpSj8_joZ-IoszRtyV21poQHPjUEpMAFSGOSJci_stD7ib868aUIYxDyWGmnrFMlhWQjtSTYl3GwioE1lDIWANLpGNjtuYTYXajWUdCoq5Td9mG7K7lvsqZ1u1UI6sMnos5WLPgNxg6-vari1HyCZlUtr5OvgVHTFl8uZXsSE37-Z7eSRM8Jx3nDyVipbA03-C-kcGp1DTTp24dPdhQn8hA-5ti7KHEMqO8TM-cNKNAl2dst4mAco"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<p class="font-title-md text-title-md text-white">Empire's Fall</p>
+</div>
+</div>
+<div class="flex-none w-[250px] md:w-[300px] aspect-[16/9] rounded-lg overflow-hidden relative group cursor-pointer snap-start transition-transform duration-300 hover:scale-105 hover:z-20">
+<img alt="Trending Movie" class="w-full h-full object-cover" data-alt="A claustrophobic, tense scene from a sci-fi horror film. Dim, flickering emergency lights illuminate a metallic corridor. Deep shadows obscure the edges, heightening the suspense. The color palette is minimal, focusing on stark blacks and harsh whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsEwtamtOh6AzEUYv0FZFtG2QapektYbXk6XnkyKm8ik0hE312OB0D7R1x_CakhLbNEzuEmHTqECsmKCkgGIZ4XymdUGz_9TAwRHenL1RAlhMhREvE2nXuHLUGfBTEFaGKu3ZKwYxLk62EKGOERie_JNbPS33NY8UCytGbC98m0BkIJ1b-FNHTiRebG2a2cDMINB4gp2HthNY5QnZTSAKShgSfPgRIWXEl-__l59PakzsneOIavWGGsSt0cGXfI_xzBfcxCq-KS9c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<p class="font-title-md text-title-md text-white">The Void Sector</p>
+</div>
+</div>
+<div class="flex-none w-[250px] md:w-[300px] aspect-[16/9] rounded-lg overflow-hidden relative group cursor-pointer snap-start transition-transform duration-300 hover:scale-105 hover:z-20">
+<div class="w-full h-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-4xl">movie</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background w-full mt-row-gap border-t border-surface-variant flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-8 gap-4">
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-primary-container">
+            CINEMAFLIX
+        </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Help Center</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Cookie Preferences</a>
+</div>
+<div class="font-label-sm text-label-sm text-secondary text-center md:text-right">
+            © 2024 CinemaFlix Inc. All rights reserved.
+        </div>
+</footer>
+<!-- CRUD Modal Overlay (Hidden by default, shown for structure representation) -->
+<!--
+    <div class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div class="glass-panel w-full max-w-lg rounded-xl p-8 relative">
+            <button class="absolute top-4 right-4 text-secondary hover:text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+            <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-white mb-6">Add New Movie</h2>
+            
+            <form class="flex flex-col gap-6">
+                <div>
+                    <label class="block font-label-sm text-label-sm text-secondary mb-2 uppercase">Title</label>
+                    <input type="text" class="w-full bg-surface-container border-b-2 border-transparent focus:border-primary-container text-white px-4 py-3 rounded-t outline-none transition-colors" placeholder="Enter movie title">
+                </div>
+                <div>
+                    <label class="block font-label-sm text-label-sm text-secondary mb-2 uppercase">Image URL</label>
+                    <input type="text" class="w-full bg-surface-container border-b-2 border-transparent focus:border-primary-container text-white px-4 py-3 rounded-t outline-none transition-colors" placeholder="Poster URL">
+                </div>
+                <div class="flex justify-end gap-4 mt-4">
+                    <button type="button" class="px-6 py-2 rounded text-white font-title-md text-title-md hover:bg-white/10 transition-colors">Cancel</button>
+                    <button type="button" class="px-6 py-2 rounded bg-primary-container text-white font-title-md text-title-md hover:bg-red-700 transition-colors">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    -->
+</body></html>
